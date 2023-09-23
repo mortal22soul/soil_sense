@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" id="main">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/soilsense-removebg-preview-fe009c4e.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soil Sense</title>
+    
+    <link rel="stylesheet" href="/assets/index-57f94168.css">
+  </head>
+  <body class="dark:bg-gray-700">
+    <header class="flex justify-around lg:pt-4">
+      <div class="flex -space-x-8">
+        <img
+          src="/assets/soilsense-removebg-preview100-bab9ec18.png"
+          alt=""
+          class="hidden scale-75 md:block" />
+        <div
+          class="p-8 text-xl text-center lg:text-2xl xl:text-4xl dark:text-white">
+          SOIL SENSE
+        </div>
+      </div>
+      <div class="flex flex-row justify-between toggle">
+        <label for="dark-toggle" class="flex items-center cursor-pointer">
+          <div class="relative">
+            <input
+              onclick="myFunction()"
+              type="checkbox"
+              name="dark-mode"
+              id="dark-toggle"
+              class="hidden checkbox" />
+            <div
+              class="block border-[1px] dark:border-white border-gray-900 w-14 h-8 rounded-full"></div>
+            <div
+              class="absolute w-6 h-6 transition bg-gray-800 rounded-full dot left-1 top-1 dark:bg-white"></div>
+          </div>
+          <div
+            class="hidden ml-3 text-sm font-medium text-gray-900 md:inline dark:text-white">
+            Dark Mode
+          </div>
+        </label>
+      </div>
+    </header>
+    <div class="flex justify-center p-4 py-16 mt-4 bg-blue-500">
+      <div class="flex flex-col items-center justify-center">
+        <div
+          class="flex flex-col items-center justify-center md:flex-row max-w-7xl">
+          <div
+            id="translate"
+            class="flex justify-center w-full px-8 m-4 overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-700">
+            <div class="flex flex-col items-center justify-center md:flex-row">
+              <div class="flex items-center justify-center py-2">
+                <div
+                  class="flex flex-col items-center justify-center text-center">
+                  <div
+                    class="w-full py-6 text-2xl font-bold text-center dark:text-white">
+                    Humidity
+                  </div>
+                  <img
+                    src="data:image/png;base64,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"
+                    alt=""
+                    class="py-2 rounded-full" />
+                  <div
+                    class="py-4 m-2 text-6xl font-medium text-stone-600 dark:text-white">
+                    78%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="translate"
+            class="flex justify-center w-full px-8 m-4 overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-700">
+            <div class="flex flex-col items-center justify-center md:flex-row">
+              <div class="flex items-center justify-center py-2">
+                <div
+                  class="flex flex-col items-center justify-center text-center">
+                  <div
+                    class="w-full py-6 text-2xl font-bold text-center dark:text-white">
+                    Moisture
+                  </div>
+                  <img
+                    src="data:image/png;base64,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"
+                    alt=""
+                    class="py-2 rounded-full" />
+                  <div
+                    class="py-4 m-2 text-6xl font-medium text-stone-600 dark:text-white">
+                    46%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="translate"
+            class="flex justify-center w-full px-8 m-4 overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-700">
+            <div class="flex flex-col items-center justify-center md:flex-row">
+              <div class="flex items-center justify-center py-2">
+                <div
+                  class="flex flex-col items-center justify-center text-center">
+                  <div
+                    class="w-full py-6 text-2xl font-bold text-center dark:text-white">
+                    Temperature
+                  </div>
+                  <img
+                    src="data:image/png;base64,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"
+                    alt=""
+                    class="py-2 rounded-full" />
+                  <div
+                    class="py-4 m-2 text-6xl font-medium text-stone-600 dark:text-white">
+                    25&deg;C
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div
+        class="relative bottom-0 flex flex-col w-full p-3 text-center bg-blue-500 lg:fixed md:flex-row md:justify-between md:space-y-0">
+        <div
+          class="flex w-full mx-3 space-x-20 text-gray-200 justify-evenly md:flex-row">
+          <div>@SoilSense</div>
+          <div>
+            Designed using <span class="text-orange-400">TailwindCSS</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
