@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  /* background-color: #132b50; */
+}
+
+#translate {
+  border: 1px solid black;
+}
+
+#translate:hover {
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 1);
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+}
